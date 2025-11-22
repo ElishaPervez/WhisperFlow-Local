@@ -97,6 +97,7 @@ if "!RTX50_DETECTED!"=="1" (
     echo.
     echo [!] RTX 50 Series / CUDA 12.8+ Detected!
     echo [!] Installing PyTorch Nightly for sm_120 support...
+    echo [!] Command: pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
     echo.
     python -m pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
 ) else (
@@ -121,6 +122,10 @@ python -m pip install pywin32
 python -m pip install scipy
 python -m pip install pyinstaller
 python -m pip install google-generativeai
+python -m pip install fastapi
+python -m pip install uvicorn
+python -m pip install jinja2
+python -m pip install python-multipart
 
 echo.
 echo ===================================================

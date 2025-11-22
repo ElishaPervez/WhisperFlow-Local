@@ -9,3 +9,7 @@ pyinstaller
 pandas
 google-generativeai
 rich
+fastapi
+uvicorn
+jinja2
+python-multipart

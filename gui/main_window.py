@@ -54,14 +54,18 @@ class MainWindow(QMainWindow):
         # Model Selection Card
         model_card = Card()
         self.cards.append(model_card)
-        model_card.hovered.connect(lambda h: self.on_card_hover(h, model_card))
+        # model_card.hovered.connect(lambda h: self.on_card_hover(h, model_card)) # Removed
         model_layout = QVBoxLayout(model_card)
         model_layout.setSpacing(15) # Space inside card
         
         # ... (rest of model card setup) ...
         model_label = QLabel("Whisper Model Size")
         self.model_combo = QComboBox()
-        self.model_combo.addItems(["tiny", "base", "small", "medium", "large-v3", "distil-large-v3"])
+        self.model_combo.addItems([
+            "tiny", "base", "small", "medium", "large-v3", 
+            "large-v3-turbo", "distil-large-v3", "distil-large-v2", 
+            "distil-medium.en", "distil-small.en"
+        ])
         self.model_combo.setCurrentText(config.model_size)
         self.model_combo.currentTextChanged.connect(self.save_model_setting)
         
@@ -112,7 +116,7 @@ class MainWindow(QMainWindow):
         
         audio_card = Card()
         self.cards.append(audio_card)
-        audio_card.hovered.connect(lambda h: self.on_card_hover(h, audio_card))
+        # audio_card.hovered.connect(lambda h: self.on_card_hover(h, audio_card)) # Removed
         audio_layout = QVBoxLayout(audio_card)
         audio_layout.setSpacing(10)
         
@@ -132,7 +136,7 @@ class MainWindow(QMainWindow):
         # Hotkey Card
         hotkey_card = Card()
         self.cards.append(hotkey_card)
-        hotkey_card.hovered.connect(lambda h: self.on_card_hover(h, hotkey_card))
+        # hotkey_card.hovered.connect(lambda h: self.on_card_hover(h, hotkey_card)) # Removed
         hotkey_layout = QVBoxLayout(hotkey_card)
         hotkey_layout.setSpacing(10)
         
@@ -147,7 +151,7 @@ class MainWindow(QMainWindow):
         # AI Post-Processing Card
         ai_card = Card()
         self.cards.append(ai_card)
-        ai_card.hovered.connect(lambda h: self.on_card_hover(h, ai_card))
+        # ai_card.hovered.connect(lambda h: self.on_card_hover(h, ai_card)) # Removed
         ai_layout = QVBoxLayout(ai_card)
         ai_layout.setSpacing(10)
         
