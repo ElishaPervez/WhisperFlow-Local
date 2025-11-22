@@ -1,0 +1,11 @@
+PyQt6
+faster-whisper
+sounddevice
+numpy
+keyboard
+pywin32
+scipy
+pyinstaller
+pandas
+google-generativeai
+rich

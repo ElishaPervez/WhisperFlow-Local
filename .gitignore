@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+venv/
+env/
+.venv/
+
+# IDEs and Tools
+.vscode/
+.idea/
+.claude/
+.gemini/
+
+# Project Specific
+models/
+recordings/
+config.json
+jules_session_*/
+Ss.s/
+
+# PyInstaller / Build artifacts
+build/
+dist/
+*.spec
+
+# OS Files
+Thumbs.db
+Desktop.ini
